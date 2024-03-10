@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <title>JOW</title>
   <meta charset="utf-8">
@@ -35,6 +35,9 @@
         <a class="nav-link" href="#section2">Team info</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="#gform">Message me</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#section3">The conclusion</a>
       </li>
     </ul>
@@ -50,6 +53,10 @@
       
       <hr class="d-sm-none">
     </div>
+    
+   
+
+
     <div class="col-sm-8">
       <h2>Welcome</h2>
       <h6>March 6, 2024</h6>
@@ -173,6 +180,38 @@
 <div class="mt-5 p-4 bg-dark text-white text-center">
 </div>
 
+ <!-- Messages -->
+
+
+
+<div class="container mt-3">
+  <h2>Messages</h2>
+  <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdGGiV9LbDz50t6O3Nv5DCfKXQ9Ett3-yqC0aWQESlI1ypOWQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+  
+    <div class="mb-3 mt-3">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter name" name="entry.1261876333" id="entry.1261876333">
+    </div>
+    <div class="mb-3">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="entry.744710745" id="entry.744710745">
+    </div>
+    
+    
+    <div class="mb-3 mt-3">
+      <label for="message">Messages:</label>
+      <textarea class="form-control" rows="5" id="comment" name="entry.1530950368" id="entry.1530950368"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+<!-- messages -->
+
+<div class="mt-5 p-4 bg-dark text-white text-center">
+</div>
+
       <h3 >This Concludes the page</h3>
       <div class="" id="section3"></div>
        <img class="img-fluid" src="https://raw.githubusercontent.com/JOASHOFWELLINGTON/HelloWorld/main/images/rgb%20ao%20copy.png" alt=" The three faces of AO"> 
@@ -194,6 +233,15 @@
 </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
 </html>
 
 
